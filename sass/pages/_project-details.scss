@@ -1,0 +1,229 @@
+// Portfolio Area
+.project-page-wrapper {
+    padding-top: 120px;
+    padding-bottom: 80px;
+
+    @include sm {
+      padding-top: 80px;
+      padding-bottom: 40px;
+    }
+    @include md {
+      padding-top: 100px;
+      padding-bottom: 60px;
+    }
+  }
+// Project Details Page
+.project-details-page {
+    padding: 120px 0;
+
+    @include sm {
+        padding: 80px 0;
+    }
+    @include md {
+        padding: 100px 0;
+    }
+}
+.project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+
+    .image {
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    .content {
+        display: flex;
+        gap: 46px;
+        padding-right: 73px;
+
+        @include rmaxwd(1199) {
+            flex-direction: column-reverse;
+            padding-right: 0;
+        }
+
+        .text {
+            .title {
+                font-size: 57px;
+                font-weight: 500;
+                line-height: 70px;
+                letter-spacing: -1px;
+                text-transform: capitalize;
+
+                @include sm {
+                    font-size: 32px;
+                    line-height: 42px;
+                }
+
+                @include md {
+                    font-size: 34px;
+                    line-height: 48px;
+                }
+                @include lg {
+                    font-size: 42px;
+                    line-height: 52px;
+                }
+
+                @include xl {
+                    font-size: 44px;
+                    line-height: 58px;
+                }
+            }
+        }
+        .project-info-wrapper {
+            width: 431px;
+            background-color: $blue-color;
+            border-radius: 20px;
+            padding: 50px 40px;
+            flex-shrink: 0;
+            margin-top: -120px;
+
+            @include rmaxwd(1199) {
+                width: 100%;
+                margin-top: 40px;
+            }
+
+            .title {
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 28px;
+                letter-spacing: 0.5px;
+                color: $white;
+                margin-bottom: 30px;
+            }
+
+            .project-info {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 24px 18px;
+
+                @include rmaxwd(575) {
+                     grid-template-columns: repeat(1, 1fr);
+                }
+
+                .te-single-meta {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                }
+                .meta-title {
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 24px;
+                    letter-spacing: 0.5px;
+                    color: $white;
+                }
+                .meta-text {
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+// Service Details Overview Area
+.project-details-overview {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 30px;
+    
+    .list-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+ 
+        @include rmaxwd(1199) {
+            flex-direction: column-reverse;
+           align-items: start;
+        }
+
+        .image {
+            width: 410px;
+            flex-shrink: 0;
+            border-radius: 20px;
+            overflow: hidden;
+
+            img {
+                border-radius: 20px;
+            }
+        } 
+       ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        margin-bottom: 0;
+        padding-left: 0;
+        position: relative;
+        gap: 20px;
+
+        &::after {
+            width: 2px;
+            height: calc(100% - 20px);
+            background-color: $gray-200;
+            content: "";
+            position: absolute;
+            left: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        li {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        
+            &::before {
+                width: 6px;
+                height: 6px;
+                border-radius: 100%;
+                background-color: $blue-color;
+                content: "";
+                display: flex;
+                flex-shrink: 0;
+                z-index: 2;
+            }
+
+        }
+       }
+       .user-card {
+        display: flex;
+        gap: 30px;
+        padding: 40px 30px 40px 40px;
+        border: 1px solid $gray-200;
+        border-radius: 20px;
+        margin-top: 50px;
+        
+        @include rmaxwd(575) {
+            flex-direction: column;
+        }
+        .image {
+            width: 90px;
+            height: 90px;
+            border-radius: 100px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .content {
+            .title {
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 28px;
+                letter-spacing: 0.5px;
+            }
+            .text {
+                margin-bottom: 0;
+            }
+        }
+       }
+    }
+}

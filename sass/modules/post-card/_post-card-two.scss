@@ -1,0 +1,28 @@
+.te-post-card {
+    &.style-2 {
+        gap: 20px;
+
+       .image {
+        border-radius: 20px 20px 20px 0;
+
+        .te-post-date {
+            top: unset;
+            right: unset;
+            left: 0;
+            bottom: 0;
+            flex-direction: row;
+            border-radius: 0 5px 0 0;
+            padding: 20px 30px;
+        }
+       } 
+       .content {
+        .title {
+            font-size: 20px;
+        }
+        .te-post-meta-info {
+            border-bottom: 1px solid $gray-200;
+            padding-bottom: 10px;
+        }
+       }
+    }
+}

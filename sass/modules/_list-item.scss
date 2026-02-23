@@ -1,0 +1,25 @@
+.te-list-item {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+
+    .icon {
+        width: 16px;
+        height: 16px;
+        border-radius: 50px;
+        background: $blue-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 10px;
+    }
+    .text {
+        font-size: 18px;
+        line-height: 36px;
+        font-weight: 400;
+        color: $gray-800;
+        margin: 0;
+    }
+}

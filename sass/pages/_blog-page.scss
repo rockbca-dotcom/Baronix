@@ -1,0 +1,29 @@
+.blog-grid-area {
+   padding-top: 140px;
+    padding-bottom: 144px;
+
+    @include rmaxwd(991) {
+        padding: 100px 0;
+    }
+    @include rmaxwd(767) {
+        padding: 70px 0;
+    }
+}
+.blog-load-btn {
+    padding: 20px 35px;
+    background: $orange-color;
+    color: $white;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    border-radius: 6px;
+
+    @include rmaxwd(767) {
+        margin-top: 0;
+    }
+
+    &:hover {
+        background-color: $sky-color;
+        color: $white;
+    }
+}

@@ -1,0 +1,179 @@
+.te-post-comments-form {
+  .te-contacts-message {
+    margin-top: 10px;
+  }
+}
+/*Comment Input Filed*/
+.te-post-comments-title {
+  .sub-title {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: $heading-font;
+    color: $orange-color;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  h2 {
+    font-size: 36px;
+    line-height: 28px;
+    font-weight: 500;
+    color: $secondary-color;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+
+    @include sm {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    small {
+      font-size: 18px;
+      font-family: $body-font;
+      color: $primary-color;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.comment-reply-title {
+  font-size: 36px;
+  line-height: 28px;
+  font-weight: 500;
+  color: $secondary-color;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+
+  @include sm {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  small {
+    font-size: 18px;
+    font-family: $body-font;
+    color: $primary-color;
+    text-transform: capitalize;
+  }
+}
+
+.te-comment-respond,
+.comment-respond {
+  position: relative;
+  background-color: $gray-100;
+  padding: 40px;
+  border-radius: 20px;
+
+  .comment-form-cookies-consent {
+    display: none;
+  }
+  .comment-notes {
+    margin-bottom: 30px;
+  }
+  p {
+    margin: 0;
+  }
+
+  .te-contacts-email,
+  .te-contacts-name,
+  .single-input-field {
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: $black-300;
+    margin-bottom: 20px;
+  }
+  .checkbox-field-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 15px 0;
+
+    
+    p {
+      margin: 0;
+    }
+
+    .single-checkbox-field {
+      margin-bottom: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 18px;
+      font-weight: 400;
+      font-family: $body-font;
+
+    }
+  }
+  .te-comment-form-cookies-consent {
+    display: none;
+  }
+  input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+  input,
+  select {
+    padding: 0 20px;
+    height: 60px;
+    width: 100%;
+    color: $black-300;
+    opacity: 1;
+    border: 1px solid $gray-200 !important;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: transparent;
+    font-family: $body-font !important;
+  }
+  *::-webkit-input-placeholder {
+    color: $black-300;
+  }
+  *:-moz-placeholder {
+    color: $black-300;
+    opacity: 1;
+  }
+  *::-moz-placeholder {
+    color: $black-300;
+    opacity: 1;
+  }
+  *:-ms-input-placeholder {
+    color: $black-300;
+  }
+  *::-ms-input-placeholder {
+    color: $black-300;
+  }
+  *::placeholder {
+    color: $black-300;
+  }
+
+
+  textarea {
+    resize: vertical;
+    padding: 20px;
+    width: 100%;
+    color: $black-300;
+    border: 1px solid $gray-200 !important;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: transparent;
+    font-family: $body-font !important;
+    height: 190px;
+    margin-bottom: 30px;
+  }
+  input:focus,
+  textarea:focus,
+  .form-select:focus{
+    outline: none !important;
+    box-shadow: none;
+    border-color: $primary-color !important;
+    transition: all 0.4s ease 0s;
+  }
+}

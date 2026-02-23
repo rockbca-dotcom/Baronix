@@ -1,0 +1,71 @@
+.te-about-image-card {
+  .te-main-img-wrapper {
+    text-align: right;
+    @include rmaxwd(991) {
+      text-align: left;
+    }
+
+    .te-main-img-inner {
+      position: relative;
+      display: inline-block;
+      z-index: 2;
+      > img {
+        border-radius: 500px 500px 0 0;
+        margin-left: 7px;
+        margin-top: 4px;
+        @include rmaxwd(650) {
+          width: 100%;
+        }
+      }
+
+      .te-img-card-shape {
+        position: absolute;
+        top: 35px;
+        right: -35px;
+        z-index: -1;
+        animation: spin 6s linear infinite;
+        
+        @include rmaxwd (575) {
+          right: 0;
+        }
+      }
+    }
+  }
+  .te-company-foundation {
+    position: absolute;
+    bottom: 22px;
+    left: -52px;
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+    gap: 10px;
+    background-color: $orange-color;
+    padding: 36px 60px 40px 60px;
+    clip-path: polygon(9% 0, 96% 0, 100% 100%, 0 100%);
+    animation: MoveUpDown 2s linear infinite alternate;
+    
+    .te-counter-wrapper {
+      color: $black;
+      font-size: 45px;
+      display: flex;
+      align-items: center;
+    }
+    .counter-title {
+      font-size: 45px;
+      font-weight: 700;
+      line-height: 54.9px;
+      letter-spacing: -0.8px;
+      color: $black;
+      margin-bottom: 0;
+    }
+    .title {
+      font-size: 14.35px;
+      font-weight: 500;
+      line-height: 140%;
+      letter-spacing: 0.359px;
+      color: $black;
+      margin-bottom: 0;
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+// Testimonial Slider Area
+
+.testimonial-slider-area {
+  &.style-3 {
+    padding: 120px 0;
+
+    @include sm {
+      padding: 80px 0;
+    }
+    @include md {
+      padding: 100px 0;
+    }
+    .slick-list {
+      .slick-slide {
+        &.slick-current {
+          .te-testimonial-card.style-3 .te-content-wrapper .te-user-meta .icon {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Process Step Area
+.te-process-step-area {
+  &.style-2 {
+      padding-top: 120px;
+      padding-bottom: 96px;
+
+      @include sm {
+          padding-top: 80px;
+          padding-bottom: 56px;
+      }
+
+      @include md {
+          padding-top: 100px;
+          padding-bottom: 76px;
+      }
+
+      .te-process-step {
+        padding: 30px 40px 40px 40px;
+        background-color: $white;
+        box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+
+        .te-counter-wrapper {
+          padding-bottom: 20px;
+        }
+      }
+  }
+}

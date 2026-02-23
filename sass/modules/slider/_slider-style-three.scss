@@ -1,0 +1,78 @@
+.slider-area {
+  &.style-3 {
+    position: relative;
+
+    .single-slider {
+      @include sm {
+        height: 450px;
+      }
+      @media only screen and (min-width: 768px) and (max-width: 1199px) {
+       padding-bottom: 0;
+      }
+      .slider-overlay {
+        background: linear-gradient( 135deg, rgb(30,174,152) 0%, rgb(0,91,172) 100%);
+        opacity: 0.659;
+      }
+      .slider-te-content-wrapper {
+        gap: 100px;
+        margin-top: -60px;
+
+        @include sm {
+          margin-top: inherit;
+        }
+
+        .slider-content {
+          width: 100%;
+          text-align: center;
+
+
+          .slider-short-title {
+            font-size: 36px;
+
+            @include sm {
+              font-size: 20px;
+              line-height: 28px;
+            }
+          }
+          .slider-title {
+            font-size: 120px;
+            line-height: 132px;
+
+            @media only screen and (min-width: 1199px) and (max-width: 1399px){
+              font-size: 78px;
+              line-height: 90px;
+            }
+            @include lg {
+              font-size: 78px;
+              line-height: 90px;
+            }
+            @include md {
+              font-size: 60px;
+              line-height: 72px;
+            }
+            @include sm {
+              font-size: 42px;
+              line-height: 52px;
+            }
+            @include xs {
+              font-size: 38px;
+              line-height: 50px;
+            }
+          }
+
+        }
+      }
+    }
+    // Slick Nav Arrow Button
+    button.slider-arrow-btn {
+      display: block !important;
+    }
+    .slider-wrapper {
+      // Slick Dots
+      .slick-dots {
+        display: none !important;
+      }
+    }
+
+  }
+}

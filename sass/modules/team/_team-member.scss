@@ -1,0 +1,123 @@
+.te-team-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+
+  &:hover {
+   .image {
+     &:before {
+       height: 250%;
+       transition: all 900ms linear;
+       background-color: transparent;
+     }
+     img {
+       transform: scale(1.1);
+       @include transition;
+     }
+   }
+   .te-content-wrapper {
+    visibility: visible;
+    opacity: 1;
+    @include transition;
+    transform: scale(1);
+   }
+  }
+  .image {
+    overflow: hidden;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      width: 200%;
+      height: 0%;
+      left: 50%;
+      top: 50%;
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: translate(-50%, -50%) rotate(-45deg);
+      content: "";
+      z-index: 1;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      transform: scale(1);
+      @include transition;
+    }
+  }
+  .te-content-wrapper {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    z-index: 2;
+    background: linear-gradient(180deg, rgba(14, 43, 197, 0.00) 0%, #0E2BC5 100%);
+    visibility: hidden;
+    opacity: 0;
+    @include transition;
+    transform: scaleY(0.3);
+
+    .content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      gap: 17px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 45px 30px;
+
+      .title {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+        color: $white;
+        font-family: $heading-font;
+        margin: 0;
+      }
+      .desc {
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 400;
+        color: $white;
+        font-family: $heading-font;
+        margin: 0;
+      }
+    }
+    .social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+      z-index: -1;
+      transition: all 0.5s ease-out;
+
+      a {
+        width: 35px;
+        height: 35px;
+        border-radius: 50px;
+        background-color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: $black;
+        flex-shrink: 0;
+        
+        &:hover {
+          background-color: $orange-color;
+          @include transition;
+        }
+      }
+    }
+  }
+}

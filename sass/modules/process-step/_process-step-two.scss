@@ -1,0 +1,116 @@
+.te-process-step {
+    &.style-two {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        background: transparent;
+        gap: 35px;
+        padding: 0;
+
+        @include rmaxwd(1199) {
+            margin-bottom: 60px !important;
+        }
+
+        @media only screen and (min-width: 1024px) {
+            padding-right: 15px;
+        }
+        &:hover {
+            .icon {
+                &:before {
+                    background-color: $white;
+                    @include transition;
+                    transform: scale(1);
+                }
+                img {
+                    transform: rotateY(360deg);
+                    @include transition;
+                }
+                .count {
+                    background-color: $orange-color;
+                    @include transition
+                }
+            }
+        }
+        .icon {
+            width: 85px;
+            height: 85px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $white;
+            border-radius: 50%;
+            position: relative;
+            z-index: 2;
+            @include rmaxwd(1199) {
+                margin-bottom: 0 !important;
+            }
+            &:before {
+                width: 100%;
+                height: 100%;
+                background-color: $orange-color;
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+                transform: scale(0);
+                transition: 0.0s;
+                border-radius: 50%;
+            }
+            .count {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 12px;
+                left: 12px;
+                transform: translate(-50%, -50%);
+                background: $sky-color;
+                width: 30px;
+                height: 30px;
+                border-radius: 50px;
+                color: $white;
+                @include transition;
+
+                &:before {
+                    width: 100%;
+                    height: 100%;
+                    background-color: $primary-color;
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: -1;
+                    transform: scale(0) rotateY(0deg);
+                    @include transition;
+                    border-radius: 50%;
+                }
+                span {
+                    font-size: 16px;
+                    line-height: 36px;
+                    font-weight: 500;
+                }
+            }
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .title {
+                margin: 0;
+                font-size: 24px;
+                line-height: 36px;
+                font-weight: 500;
+                color: $white;
+            }
+            .desc {
+                margin: 0;
+                font-size: 18px;
+                line-height: 30px;
+                font-weight: 400;
+                color: $white-100;
+            }
+        }
+    }
+}

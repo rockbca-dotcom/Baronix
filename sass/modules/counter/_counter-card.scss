@@ -1,0 +1,90 @@
+.te-counter-card {
+  z-index: 1;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 60px;
+
+  @media only screen and (min-width: 576px) and (max-width: 991px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include rmaxwd(575) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 50px;
+  }
+
+  .te-counter-item {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+
+    &:hover {
+      .icon {
+          img {
+            transform: rotateY(360deg);
+            @include transition;
+          }
+      }
+    }
+    .icon {
+      width: 100px;
+      height: 100px;
+      background-color: $blue-color;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      img {
+        @include transition;
+      }
+    }
+    .te-counter-title {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      gap: 26px;
+      flex-direction: column;
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+      }
+    }
+    .number {
+      font-family: $heading-font;
+      font-weight: 500;
+      font-size: 57px;
+      line-height: 46px;
+      text-align: center;
+      color: $black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      letter-spacing: -1px;
+
+      @include sm {
+        font-size: 36px;
+        line-height: 40px;
+      }
+    }
+    .title {
+      margin: 0;
+      font-family: $heading-font;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 18px;
+      color: $gray-800;
+    }
+    .text {
+      margin: 0;
+      color: $white-100;
+    }
+  }
+}

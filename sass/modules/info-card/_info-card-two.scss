@@ -1,0 +1,58 @@
+.te-info-card {
+    &.style-2 {
+        background-color: $white;
+        box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+        border-radius: 20px;
+        padding: 40px 40px 27px 40px;
+
+        @include sm {
+            padding: 35px;
+        }
+        @include lg {
+            padding: 35px;
+        }
+        &:hover {
+            .image {
+                img {
+                    transform: scale(1.03);
+                    @include transition;
+                }
+            }
+            .content { 
+                .te-read-more {
+                    .te-theme-btn {
+                        background-color: inherit;
+                        color: $blue-color;
+                    }
+                }
+            }
+        }
+        .image {
+            border-radius: 20px;
+            overflow: hidden;
+
+            img {
+                transform: scale(1);
+                @include transition;
+                width: 100%;
+            }
+        }
+        .te-title-wrapper {
+            padding-bottom: 15px;
+        }
+        .te-content-wrapper {
+            text-align: left;
+            align-items: flex-start;
+        }
+        .content {
+            align-items: flex-start;
+            gap: 10px;
+            .te-read-more {
+                .te-theme-btn {
+                    padding: 0;
+                    border: 0;
+                }
+            }
+        }
+    }
+}

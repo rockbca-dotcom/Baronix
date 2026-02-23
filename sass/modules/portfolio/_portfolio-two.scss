@@ -1,0 +1,18 @@
+.te-portfolio-card {
+  &.style-2 {
+    .te-content-wrapper {
+      .content {
+        background-color: #317efeb8;
+        padding: 20px;
+        border-radius: 20px;
+
+        .btn-wrapper {
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+        }
+      }
+    }
+  }
+}

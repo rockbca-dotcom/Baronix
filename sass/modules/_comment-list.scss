@@ -1,0 +1,219 @@
+//.te-post-comments-form,
+//.te-post-comments {
+//  margin-top: 70px;
+//}
+.te-comment-respond {
+  margin-top: 70px;
+}
+.te-comment-title,
+.wp-block-comments {
+  h2,
+  .wp-block-comments-title {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 30px;
+  }
+}
+/* Block Comment Start */
+.wp-block-comments {
+  .wp-block-comment-template {
+    padding-left: 0;
+    .wp-block-te-comment-reply {
+      margin-top: 15px;
+    }
+    li {
+      .wp-block-columns {
+        padding: 50px;
+        border: 1px solid #dfe2e9;
+        border-radius: 8px;
+        margin-bottom: 24px;
+
+        .wp-block-column {
+          &:first-child {
+            flex-basis: 80px !important;
+          }
+        }
+        .wp-block-avatar {
+          width: 100px;
+          flex-shrink: 0;
+          border-radius: 50%;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+          }
+        }
+        .wp-block-comment-author-name {
+            a {
+              font-size: 21px;
+              margin-bottom: 5px;
+              font-weight: 500;
+              font-family: $heading-font;
+              color: $secondary-color;
+            }
+        }
+        .wp-block-comment-edit-link {
+          a {
+            color: $primary-color;
+          }
+        }
+        .wp-block-comment-date,
+        .wp-block-comment-edit-link {
+          a {
+            color: #9ba8c3;
+            font-size: 16px;
+            font-weight: 400;
+            font-family: $body-font;
+          }
+        }
+        .wp-block-te-comment-reply {
+           a {
+             border-radius: 6px;
+             font-size: 14px;
+             font-weight: 500;
+             color: $secondary-color;
+             border: 1px solid $blue-color;
+             padding: 4px 26px;
+             display: inline-block;
+
+             &:hover {
+               background-color: $blue-color;
+               color: $white;
+               @include transition;
+             }
+           }
+        }
+      }
+    }
+  }
+}
+
+/* Block Comment End */
+.te-latest-comments {
+  .te-comment-respond,
+  .comment-respond
+   {
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+  li {
+
+    .children {
+      .te-comments-item {
+        margin-left: 50px;
+
+        @include sm {
+          margin-left: 0;
+        }
+      }
+      .children {
+        .te-comments-item {
+          margin-left: 100px;
+          border-top: 1px solid $gray-100;
+        }
+      }
+    }
+
+    .te-comments-item {
+      padding: 50px;
+      border: 1px solid $gray-100;
+      background-color: $gray-100;
+      border-radius: 20px;
+      margin-bottom: 24px;
+
+      @include rmaxwd(767) {
+        padding: 30px;
+      }
+      .te-comments-avatar {
+        float: left;
+
+        @include sm {
+          float: inherit;
+          margin-bottom: 20px;
+        }
+        img {
+          margin-right: 30px;
+          width: 100px;
+          border-radius: 50px;
+        }
+      }
+      .te-comments-text {
+          overflow: hidden;
+
+
+        p {
+          font-size: 16px;
+          line-height: 30px;
+          margin-bottom: 20px;
+          color: $text-color;
+        }
+        .te-avatar-name {
+          margin-bottom: 10px;
+          position: relative;
+
+          h5 {
+            font-size: 21px;
+            margin-bottom: 5px;
+            font-weight: 500;
+            font-family: $heading-font;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+          span {
+            color: $gray-900;
+            font-size: 16px;
+            font-weight: 400;
+            font-family: $body-font;
+            font-style: italic;
+
+            @include sm {
+              display: inline-block;
+              width: 100%;
+            }
+          }
+        }
+        .te-comment-reply {
+          display: inline-flex;
+          align-items: center;
+          border-radius: 50px;
+          font-size: 14px;
+          font-weight: 500;
+          color: $secondary-color;
+          border: 1px solid $blue-color;
+          padding: 4px 26px;
+          gap: 8px;
+          position: absolute;
+          top: 0;
+          right: 0;
+
+          @include sm {
+            position: unset;
+            margin-top: 10px;
+          }
+
+          &:hover {
+            background-color: $blue-color;
+            color: $white;
+            @include transition;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+.te-post-comments .te-latest-comments > ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.te-comments-text > ul,.te-comments-text > ol {
+  margin-bottom: 20px;
+}
+ul.children {
+  list-style: none;
+}
+
+

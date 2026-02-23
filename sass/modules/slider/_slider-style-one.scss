@@ -1,0 +1,382 @@
+.slider-area {
+  overflow: hidden;
+  position: relative;
+  @include gradient-color;
+
+    &.style-2 {
+      .te-single-slider {
+        height: 950px;
+        padding-top: 70px;
+
+        @include sm {
+          height: unset;
+          padding: 80px 0;
+        }
+
+        .slider-feature-img {
+          position: absolute;
+          right: 0;
+          top: 0;
+
+          @include xl {
+            right: -200px;
+          }
+          @include lg {
+            right: -280px;
+          }
+          @include md {
+            right: -380px;
+          }
+
+          .company-award {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-top: 50px;
+            left: 135px;
+
+            .icon {
+              width: 170px;
+              height: 170px;
+              box-shadow: 0px 5px 90px 0px rgba(2, 24, 93, 0.12);
+              background-color: #ffffff;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+
+          .slider-feature-img-overlay {
+            @include sm {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              background: linear-gradient(180deg, #a0d7fee3 0%, #f6fbffdb 100%);
+            }
+          }
+
+        }
+        .slider-left-shape {
+          position: absolute;
+          left: 30px;
+          bottom: -100px;
+          animation: MoveUpDown 2s linear infinite alternate;
+
+          @include rmaxwd(991) {
+            display: none;
+          }
+        }
+        .slider-right-shape {
+          position: absolute;
+          left: -60px;
+          animation: MoveLeftRight 2s linear infinite alternate;
+          top: 0px;
+          @include rmaxwd(991) {
+            display: none;
+          }
+        }
+        .slider-circle-shape {
+          position: absolute;
+          left: 180px;
+          z-index: -1;
+          bottom: 80px;
+          animation: zoom-in-zoom-out 7s linear infinite alternate;
+        }
+      }
+    }
+  
+  .te-slider-wrapper {
+
+    // Active Slider Animate
+    .slick-active .te-slider-short-title,
+    .slick-active .te-slider-title,
+    .slick-active .te-slider-short-desc,
+    .slick-active .te-slider-btn-wrapper {
+      -webkit-animation-name: MovefadeUp;
+      animation-name: MovefadeUp;
+      -webkit-animation-fill-mode: both;
+    }
+
+
+    .slick-active .te-slider-short-title {
+      -webkit-animation-delay: 0.3s;
+      animation-delay: 0.3s;
+      -webkit-animation-duration: 0.3s;
+      animation-duration: 0.3s;
+    }
+    .slick-active .te-slider-title {
+      -webkit-animation-delay: 0.5s;
+      animation-delay: 0.5s;
+      -webkit-animation-duration: 0.5s;
+      animation-duration: 0.5s;
+    }
+
+    .slick-active .te-slider-short-desc {
+      -webkit-animation-delay: 0.7s;
+      animation-delay: 0.7s;
+      -webkit-animation-duration: 0.7s;
+      animation-duration: 0.7s;
+    }
+
+    .slick-active .te-slider-btn-wrapper {
+      -webkit-animation-delay: 0.9s;
+      animation-delay: 0.9s;
+      -webkit-animation-duration: 0.9s;
+      animation-duration: 0.9s;
+    }
+
+    // Slick Dots
+    .slick-dots {
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      position: absolute;
+      top: 50%;
+      right: 46px;
+      transform: translateY(-50%);
+      z-index: 2;
+      flex-direction: column;
+
+      @include sm {
+        display: none !important;
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 30px;
+        bottom: 70px;
+        top: unset;
+        left: unset;
+        right: unset;
+        transform: none;
+      }
+
+      li {
+        display: inline-block;
+        line-height: 0;
+        outline: 1px solid transparent;
+        border: 4px solid transparent;
+        border-radius: 50px;
+        @include transition;
+
+        button {
+          font-size: 2px;
+          text-indent: -9999px;
+          padding: 0;
+          width: 10px;
+          height: 10px;
+          background-color: $blue-color;
+          border-radius: 50px;
+          position: relative;
+          @include transition;
+
+          &:hover {
+            background-color: $blue-color;
+            @include transition;
+          }
+        }
+        &.slick-active {
+          @include transition;
+          outline: 1px solid $blue-color;
+
+          button {
+            @include transition;
+          }
+        }
+      }
+    }
+  }
+
+  .te-single-slider {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+
+    @include sm {
+      background-image: none !important;
+    }
+      .te-slider-overlay { 
+        background-color: $white;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        @include sm {
+          left: 0;
+        }
+        .te-slider-overlay-shape {
+          position: absolute;
+          top: 0;
+          height: 100%;
+          left: -340px;
+          width: 100%;
+
+          @include sm {
+            display: none;
+          }
+        }
+      }
+
+      .te-slider-content-wrapper {
+        position: relative;
+        z-index: 99;
+
+        .te-slider-content {
+          .te-slider-short-title {
+            font-family: $body-font;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 26px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: $primary-color;
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 15px;
+
+
+          }
+          .te-slider-title {
+          color: $black;
+          font-family: $body-font;
+          font-size: 69px;
+          font-weight: 500;
+          line-height: 110%;
+          letter-spacing: -1px;
+          margin-bottom: 30px;
+
+            @media only screen and (min-width: 992px) and (max-width: 1400px){
+              font-size: 60px;
+              line-height: 64px;
+            }
+
+            @include lg {
+              font-size: 48px;
+              line-height: 56px;
+            }
+            @include md {
+              font-size: 42px;
+              line-height: 52px;
+            }
+            @include sm {
+              font-size: 38px;
+              line-height: 44px;
+              margin-bottom: 20px;
+            }
+          }
+          .te-slider-short-desc {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 36px;
+            color: $gray-900;
+
+            @include lg {
+              font-size: 18px;
+              line-height: 32px;
+            }
+            @include md {
+              font-size: 18px;
+              line-height: 32px;
+            }
+            @include sm {
+              font-size: 18px;
+              line-height: 32px;
+            }
+          }
+          .te-slider-btn-wrapper {
+            padding-top: 52px;
+            display: flex;
+            align-items: center;
+            gap: 27px;
+            flex-wrap: wrap-reverse;
+            @include sm {
+              padding-top: 30px;
+            }
+
+            .te-theme-btn {
+              padding: 11px 30px;
+              color: $white;
+              border-radius: 50px;
+              background-color: $primary-color;
+              flex-shrink: 0;
+            }
+            .te-call-btn {
+              display: flex;
+              align-items: center;
+              gap: 20px;
+
+              .te-icon {
+                width: 55px;
+                height: 55px;
+                background-color: $white;
+                border-radius: 50px;
+                flex-shrink: 0;
+                border: 5px solid $orange-color;
+                font-size: 20px;
+                font-weight: 900;
+                color: $primary-color;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                animation: ripple 4s infinite;
+                box-shadow: 0 0 0 0 rgba(249, 212, 20, 0.8);
+              }
+              .te-content {
+                display: flex;
+                flex-direction: column;
+
+                .te-title {
+                  font-size: 18px;
+                  font-weight: 400;
+                  line-height: 24px;
+                  color: #335371;
+                }
+                .te-text {
+                  font-size: 20px;
+                  font-weight: 500;
+                  line-height: 24px;
+                  letter-spacing: 0.5px;
+                  color: $black;
+                }
+              }
+            }
+          }
+        }
+
+      }
+    // .te-slider-image {
+    //   position: relative;
+    //   z-index: 2;
+    //   width: 860px;
+    //   animation: MoveUpDown 2s linear infinite alternate;
+    //   right: 47px;
+    //   top: 24px;
+
+    //   &.te-moblile-slider-img {
+    //     @include sm {
+    //       left: -30px;
+    //     }
+    //   }
+
+    //   @include sm {
+    //     animation: none;
+    //     //margin-bottom: -150px;
+    //     right: unset;
+    //     text-align: center;
+    //   }
+    //   @include rmaxwd(1799) {
+    //     width: auto;
+    //     margin-top: inherit;
+    //   }
+
+    // }
+  }
+}

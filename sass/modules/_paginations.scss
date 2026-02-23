@@ -1,0 +1,251 @@
+.wp-block-query-pagination,
+.navigation.posts-navigation,
+.comment-navigation {
+  display: flex;
+  align-items: center;
+
+  .wp-block-query-pagination-numbers {
+    width: inherit;
+  }
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  .wp-block-query-pagination-previous,
+  .wp-block-query-pagination-next,
+  .nav-next a,
+  .nav-previous a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $secondary-color;
+    background-color: $white;
+    border-radius: 50px;
+    height: 53px;
+    padding: 0 20px;
+    @include transition;
+    font-size: 24px;
+    font-weight: 500;
+    border: 1px solid $gray-300;
+    text-transform: capitalize;
+
+    @include rmaxwd(767) {
+      height: 40px;
+    }
+
+    &:hover {
+      background: $primary-color !important;
+      color: $white;
+      border-color: $primary-color;
+      @include transition;
+    }
+  }
+
+}
+
+.te-basic-pagination,
+.page-links,
+.wp-block-query-pagination-numbers {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  ul {
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    li {
+      padding-top: 0;
+    }
+    .prev,
+    .next
+    {
+      span {
+        display: none;
+      }
+    }
+  }
+  .post-page-numbers {
+    background-color: rgba(71, 112, 247, 0.1) !important;
+  }
+  .page-numbers,
+  .post-page-numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $secondary-color;
+    background-color: $white;
+    border-radius: 50px;
+    height: 60px;
+    width: 60px;
+    @include transition;
+    font-size: 24px;
+    font-weight: 500;
+    border: 1px solid $gray-300;
+    text-transform: capitalize;
+
+    @include rmaxwd(767) {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+    }
+    &:hover {
+      background: $primary-color !important;
+      color: $white;
+      border-color: $primary-color;
+      @include transition;
+    }
+
+    &.current {
+      background: $primary-color !important;
+      color: $white;
+      border-color: $primary-color;
+      @include transition;
+    }
+
+  }
+}
+
+
+  // Next Prev Post
+  .te-blog-post-nav {
+    margin: 40px 0;
+    background: #fff;
+    padding: 23px 30px;
+    padding-bottom: 22px;
+    border-radius: 20px;
+    border: 1px solid $gray-200;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  
+  
+    @media only screen and (min-width: 992px) and (max-width: 1024px) {
+      flex-direction: column;
+      padding: 30px;
+      margin: 30px 0;
+    }
+    @include rmaxwd(767) {
+      flex-direction: column;
+      padding: 30px;
+      margin: 30px 0;
+    }
+  
+    // .divider {
+    //   background-color: $gray-200;
+    //   width: 1px;
+    //   @media only screen and (min-width: 992px) and (max-width: 1024px) {
+    //     width: 100%;
+    //     height: 1px;
+    //   }
+    //   @include rmaxwd(767) {
+    //     width: 100%;
+    //     height: 1px;
+    //   }
+    // }
+  
+    .te-post-navigation {
+      display: flex;
+      gap: 20px;
+      flex-basis: 0;
+      flex-grow: 1;
+      width: 50%;
+      @include rmaxwd(374) {
+        flex-direction: column !important;
+      }
+      @media only screen and (min-width: 992px) and (max-width: 1024px) {
+        width: 100%;
+      }
+      @include rmaxwd(767) {
+        width: 100%;
+      }
+  
+      &::after {
+        content: "";
+        background-color: $gray-200;
+        width: 1px;
+        height: 100%;
+        margin-right: -15px;
+
+        @media only screen and (min-width: 992px) and (max-width: 1024px) {
+          display: none;
+        }
+        @include rmaxwd(767) {
+          display: none;
+        }
+      }
+      &:last-child {
+        flex-direction: row-reverse;
+  
+        .text {
+          text-align: right;
+  
+          @include rmaxwd(374) {
+            text-align: left;
+          }
+        }
+        &::after {
+          display: none;
+        }
+      }
+      .te-post-img {
+        width: 96px;
+        height: 96px;
+        position: relative;
+        border-radius: 50px;
+        overflow: hidden;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $blue-color;
+        font-size: 28px;
+        color: $white;
+        @include rmaxwd(374) {
+          width: 100% !important;
+          height: 150px !important;
+        }
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          left: 0;
+          top: 0;
+        }
+      }
+      .text {
+        width: 100%;
+  
+        span {
+          font-size: 18px;
+          font-family: $heading-font;
+          text-transform: capitalize;
+          font-weight: 400;
+          display: block;
+          color: $gray-800;
+        }
+        h4 {
+          text-transform: capitalize;
+          font-size: 20px;
+          font-weight: 500;
+          margin: 0;
+          line-height: 30px;
+          letter-spacing: 0.5px;
+        }
+      }
+      .theme-navigation {
+        width: 100%;
+      }
+    }
+  }
+  

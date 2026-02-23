@@ -1,0 +1,108 @@
+.te-section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 60px;
+
+  @include sm {
+    flex-direction: column;
+    gap: 50px;
+    align-items: unset;
+    margin-bottom: 40px;
+  }
+
+  &.left-align-title {
+    .te-section-content {
+      margin-top: -15px;
+    }
+  }
+  .te-section-content {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    z-index: 2;
+    position: relative;
+    margin-bottom: -16px;
+    margin-top: -18px;
+  }
+  .short-title {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 2px;
+    color: $blue-color;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    text-transform: uppercase;
+    
+    &::before,
+    &::after {
+      content: "";
+      width: 40px;
+      height: 2px;
+      border-bottom: 2px solid $blue-color;
+      flex: 1 1;
+    }
+
+    &.only-divider {
+      gap: 10px;
+      &::before {
+        display: none;
+      }
+    }
+  }
+  .title {
+    font-size: 57px;
+    line-height: 65px;
+    font-weight: 500;
+    font-family: $heading-font;
+    letter-spacing: -1px;
+    color: $black;
+    margin-bottom: 0;
+    text-transform: capitalize;
+
+    @include lg {
+      font-size: 48px;
+      line-height: 62px;
+    }
+    @include lg {
+      font-size: 47px;
+    }
+    @include md {
+      font-size: 38px;
+      line-height: 48px;
+    }
+    @include sm {
+      font-size: 32px;
+      line-height: 42px;
+    }
+    @media only screen and (min-width: 0px) and (max-width: 439px){
+      br {
+        display: none;
+      }
+    }
+    span {
+      color: $blue-color;
+    }
+  }
+  .te-section-desc {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: $body-font;
+    color: $text-color;
+    margin-bottom: 0;
+
+    .te-theme-btn {
+      background-color: transparent;
+      color: $black;
+
+      &:hover {
+        background-color: $primary-color;
+        color: $white;
+        @include transition;
+      }
+    }
+  }
+}

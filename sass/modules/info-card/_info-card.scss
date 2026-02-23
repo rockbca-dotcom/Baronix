@@ -1,0 +1,185 @@
+.te-info-card-wrapper {
+    position: relative;
+}
+.te-info-card {
+    padding: 40px;
+    position: relative;
+    margin-bottom: 24px;
+    @include transition;
+    border-radius: 20px;
+    top: 0;
+    @include lg {
+        padding: 40px 25px;
+    }
+    &:hover {
+        background-color: $white;
+        box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+        top: -5px;
+        @include transition;
+
+        .te-image-wrapper {
+            .overlay {
+                @include transition;
+                opacity: 0.72;
+            }
+            img {
+                transform: scale(1.2);
+                @include transition;
+            }
+        }
+        .icon {
+            img {
+                transform: rotateY(360deg);
+                @include transition;
+            }
+        }
+        .content {
+            .te-read-more {
+                .te-theme-btn {               
+                    background-color: $blue-color;
+                    border-color: $blue-color;
+                    color: $white;
+                    @include transition;
+                }
+            }
+        }
+    }
+    .te-info-card-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        height: 100%;
+    }
+
+    .te-image-wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        transition: all 0.6s ease;
+        img {
+            width: 100%;
+            height: 100%;
+            transform: scale(1);
+            @include transition;
+        }
+        .overlay {
+            width: 100%;
+            height: 100%;
+            background: $primary-color;
+            @include transition;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.6;
+        }
+    }
+    .icon {
+        display: flex;
+        flex-shrink: 0;
+        justify-content: start;
+        width: 54px;
+        height: 50px;
+
+        img {
+            @include transition;
+        }
+    }
+    .te-content-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .te-title-wrapper {
+        display: flex;
+        gap: 16px;
+        padding-bottom: 10px;
+        border-bottom: none;
+        transition: all 0.6s ease;
+        flex-direction: column;
+        align-items: center;
+
+        .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            width: 105px;
+            height: 105px;
+            background: transparent;
+            border-radius: 100%;
+            border: 2px solid #131a2a1a;
+            position: relative;
+
+            &::before,
+            &::after {
+                position: absolute;
+                content: "";
+                width: 10px;
+                height: 10px;
+                border-radius: 100%;
+                background-color: $blue-color;
+                border: 1px solid $gray-200;
+            }
+            &::before {
+                top: 15px;
+                left: 5px;
+            }
+            &::after {
+                bottom: 15px;
+                right: 5px;
+            }
+        }
+        .title {
+            font-size: 24px;
+            line-height: 24px;
+            font-weight: 500;
+            margin: 0;
+            color: $secondary-color;
+            transition: all 0.6s ease;
+        }
+        .divider {
+            width: 55px;
+            height: 2px;
+            background-color: $blue-color;
+        }
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        .desc {
+            transition: all 0.6s ease;
+            font-size: 18px;
+            line-height: 36px;
+            font-weight: 400;
+            margin: 0;
+            color: $text-color;
+        }
+        .te-read-more {
+            display: flex;
+            justify-content: start;
+
+            .te-theme-btn {
+                background-color: transparent;
+                color: $blue-color;
+                border: 1px solid $gray-900;
+                padding: 9px 28px;
+
+
+                &:hover {
+                    background-color: $blue-color;
+                    color: $white;
+                    @include transition;
+                }
+            }
+        }
+    }
+
+}

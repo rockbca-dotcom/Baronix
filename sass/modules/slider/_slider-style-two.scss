@@ -1,0 +1,221 @@
+.slider-area {
+  &.style-1 {
+    position: relative;
+    overflow: visible;
+    background: transparent;
+
+    &:before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: 500px;
+      opacity: 0.3;
+      background: $primary-color;
+      filter: blur(681.9541625976562px);
+    }
+
+    .te-single-slider {
+      position: relative;
+      @include gradient-color;
+
+
+
+      .te-slider-overlay {
+        left: 0;
+        @include gradient-color;
+        
+        &::before {
+          display: none;
+        }
+      }
+      .slider-shape {
+        position: absolute;
+        border-radius: 20px;
+        overflow: hidden;
+
+        img {
+          object-fit: cover;
+          position: absolute;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          top: 0;
+        }
+      }
+      .shape-one {
+        top: 50px;
+        left: 0;
+
+        width: 300px;
+        height: 290px;
+
+        @include rmaxwd(991) {
+          display: none;
+        }
+        @include md {
+          width: 200px;
+          height: 150px;
+          top: 100px;
+        }
+        @include lg {
+          width: 200px;
+          height: 150px;
+          top: 100px;
+        }
+
+        @include xl {
+          top: 160px;
+          width: 250px;
+          height: 200px;
+        }
+      }
+      .shape-two {
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 310px;
+        @include rmaxwd(991) {
+          display: none;
+        }
+
+        @include md {
+          top: 130px;
+          right: -30px;
+          width: 250px;
+          height: 180px;
+        }
+        @include lg {
+          top: 130px;
+          right: -30px;
+          width: 250px;
+          height: 180px;
+        }
+        @include xl {
+          width: 300px;
+          height: 250px;
+          top: 70px;
+          right: -40px;
+        }
+
+      }
+      .shape-three {
+        bottom: 30px;
+        left: 50%;
+        width: 330px;
+        height: 170px;
+        transform: translateX(-50%);
+
+        @include sm {
+          display: none !important;
+        }
+        @include rmaxwd(991) {
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+      }
+
+      .te-slider-container {
+        display: flex;
+        padding: 120px 0;
+        gap: 30px;
+
+        @include sm {
+          flex-direction: column-reverse;
+          padding: 80px 0;
+          text-align: center;
+        }
+        @include md {
+          padding: 100px 0;
+          align-items: center;
+        }
+        .te-slider-column {
+          width: 50%;
+          flex-grow: 1;
+
+          @include sm {
+            width: 100%;
+          }
+        }
+      }
+      .te-slider-content-wrapper {
+        .te-slider-content {
+          .te-slider-btn-wrapper {
+            @include sm {
+              justify-content: center;
+            }
+            .te-theme-btn {
+              background-color: $blue-color;
+              color: $white;
+
+              &:hover {
+                background-color: $orange-color;
+                color: $black;
+              }
+            }
+            .te-call-btn {
+              .te-icon {
+                color: $blue-color;
+              }
+            }
+          }
+          .te-slider-title {
+            font-size: 82px;
+            font-weight: 500;
+            line-height: 96.76px;
+            letter-spacing: -1px;
+
+            @include sm {
+              font-size: 28px;
+              line-height: 42px;
+            }
+
+            @include md {
+              font-size: 32px;
+              line-height: 52px;
+            }
+            @include lg {
+              font-size: 62px;
+              line-height: 80px;
+            }
+          }
+        }
+      }
+    }
+    .te-slider-wrapper {
+      .container {
+        position: relative;
+      }
+      .slider-shape-bg {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin-left: 100px;
+
+        @include sm {
+          display: none;
+        }
+        @include rmaxwd(1399) {
+          margin-left: 0;
+        }
+
+        &:before {
+          position: absolute;
+          content: "";
+          width: 400px;
+          height: 400px;
+          background: $orange-color;
+          border-radius: 500px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+          right: 0;
+        }
+      }
+    }
+  }
+}

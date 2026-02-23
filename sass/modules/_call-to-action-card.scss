@@ -1,0 +1,60 @@
+.cta-area {
+  background-color: $blue-color;
+  padding: 20px 70px;
+  border-radius: 0 0 20px 20px;
+  .te-content-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .short-title {
+      font-size: 21px;
+      font-weight: 500;
+      color: $white;
+      margin-bottom: 0;
+    }
+    .te-cta-title {
+      color: $white;
+      text-transform: capitalize;
+      margin-bottom: 0;
+      font-size: 57px;
+      line-height: 77px;
+      letter-spacing: -1px;
+
+      @include rmaxwd(375) {
+        font-size: 34px !important;
+      }
+      @include md {
+        font-size: 40px;
+        line-height: 42px;
+      }
+      @include sm {
+        font-size: 36px;
+        line-height: 42px;
+      }
+    }
+    .text {
+      font-size: 18px;
+      line-height: 36px;
+      color: $white;
+      margin-bottom: 0;
+    }
+  }
+  .te-btn-wrapper {
+    margin-top: 30px;
+  }
+  .te-cta-inner-area {
+    display: flex;
+    align-items: center;
+
+    @include sm {
+      flex-direction: column;
+    }
+    .te-cta-collumn {
+      flex-grow: 1;
+      flex-basis: 0;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+  }
+}

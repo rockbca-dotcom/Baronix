@@ -1,0 +1,111 @@
+//.contact-map-area {
+//    padding-bottom: 120px;
+//
+//    @include md {
+//        padding-bottom: 100px;
+//    }
+//    @include sm {
+//        padding-bottom: 80px;
+//    }
+//}
+.contact-form-area {
+    padding-top: 110px;
+    padding-bottom: 120px;
+
+    @include sm {
+        padding-top: 70px;
+        padding-bottom: 80px;
+    }
+
+    @include md {
+        padding-top: 90px;
+        padding-bottom: 100px;
+    }
+    .te-comment-respond,
+    .te-title-wrapper {
+        .title {
+            font-size: 57px;
+            font-weight: 500;
+            line-height: 77.72px;
+            letter-spacing: -1px;
+            text-transform: capitalize;
+            margin-bottom: 30px;
+
+            @include sm {
+                font-size: 32px;
+                line-height: 38px;
+            }
+            @include md {
+                font-size: 34px;
+                line-height: 40px;
+            }
+
+            @include lg {
+                font-size: 48px;
+                line-height: 52px;
+            }
+        }
+    }
+   // Social Profile
+    .te-social-profile-link {
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        margin-top: 50px;
+
+        a {
+            width: 50px;
+            height: 50px;
+            color: $black;
+            background-color: $gray-100;
+            border: 1px solid $gray-200;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+            @include transition;
+
+            &:hover {
+                color: $white;
+                background-color: $blue-color;
+                border-color: $blue-color;
+                @include transition;
+            }
+        }
+    }
+}
+// Contact Info Area
+.te-contact-info-wrapper {
+ @include rmaxwd(991) {
+    margin-bottom: 60px;
+ }
+}
+.te-contact-info {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+
+    .te-icon-card  {
+        @include sm {
+            flex-direction: unset;
+        }
+    }
+}
+
+
+// Map Widget
+.te-map-widget {
+    iframe {
+      width: 100%;
+      height: 650px;
+      margin-bottom: -12px;
+    
+      @include sm {
+        height: 350px;
+      }
+      @include md {
+        height: 450px;
+      }
+    }
+  }

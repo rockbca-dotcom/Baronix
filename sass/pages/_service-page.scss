@@ -1,0 +1,200 @@
+// Service 
+.feature-area {
+    &.style-3 {
+        padding-top: 120px;
+        padding-bottom: 96px;
+
+        @include sm {
+            padding-top: 80px;
+            padding-bottom: 56px;
+        }
+
+        @include md {
+            padding-top: 100px;
+            padding-bottom: 76px;
+        }
+
+        .te-info-card  {
+            box-shadow: none;
+            border: 1px solid $gray-200;
+            padding: 0;
+            border-radius: 20px;
+            overflow: hidden;
+
+
+            .te-info-card-inner {
+                gap: 0;
+            }
+            .image {
+                border-radius: 0;
+            }
+
+            .te-content-wrapper {
+                padding: 40px 40px 30px 40px;
+
+                @include rmaxwd(1399) {
+                    padding: 40px 30px 30px 30px;
+                }
+            }
+        }
+    }
+}
+
+
+// Service Details Page
+.te-service-details-wrapper {
+    @include sm {
+        margin-top: 40px;
+    }
+    @include md {
+        margin-top: 40px;
+    }
+}
+.service-details-page {
+    padding-top: 120px;
+    padding-bottom: 96px;
+
+    @include sm {
+        padding-top: 80px;
+        padding-bottom: 56px;
+    }
+
+    @include md {
+        padding-top: 100px;
+        padding-bottom: 76px;
+    }
+
+    .sidebar {
+        .te_widget_categories {
+            ul {
+                li {
+                    a {
+                        .my-icon {
+                            font-size: 24px;
+                        }
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.service-details {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .image {
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    .content {
+        .te-title-wrapper {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 46px;
+
+            .title-inner {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                .icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    background-color: $blue-color;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 20px;
+                    font-size: 24px;
+                    color: $white;
+                }
+                .title {
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 39.84px;
+                    letter-spacing: 0.5px;
+                    margin-bottom: 0;
+                    color: $blue-color;
+                }
+            }
+        }
+    }
+}
+
+// Service Details Overview Area
+.service-details-overview {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 30px;
+    
+    .list-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+       .icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        background-color: #1834c61f;
+        font-size: 24px;
+        color: $primary-color;
+       } 
+       ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        margin-bottom: 0;
+        padding-left: 0;
+        position: relative;
+        gap: 20px;
+
+        &::after {
+            width: 2px;
+            height: calc(100% - 20px);
+            background-color: $gray-200;
+            content: "";
+            position: absolute;
+            left: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        li {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        
+            &::before {
+                width: 6px;
+                height: 6px;
+                border-radius: 100%;
+                background-color: $blue-color;
+                content: "";
+                display: flex;
+                flex-shrink: 0;
+                z-index: 2;
+            }
+
+        }
+
+       }
+    }
+}

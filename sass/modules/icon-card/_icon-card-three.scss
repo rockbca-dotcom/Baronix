@@ -1,0 +1,36 @@
+.te-icon-card {
+    &.style-three {
+        display: flex;
+        background: transparent;
+        flex-direction: column;
+        gap: 32px;
+        margin-bottom: 50px;
+
+        .icon {
+            width: 72px;
+            height: 72px;
+            display: flex;
+            flex-shrink: 0;
+            img {
+                width: 100%;
+            }
+        }
+        .content {
+            display: flex;
+            gap: 30px;
+            flex-direction: column;
+            .title {
+                color: $white;
+            }
+            .desc {
+                color: $white-100;
+            }
+        }
+        @include sm {
+            gap: 25px;
+            .content {
+                gap: 18px;
+            }
+        }
+    }
+}

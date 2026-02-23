@@ -1,0 +1,249 @@
+.newsletter-area {
+  &.style-1 {
+    margin-top: -210px;
+    @include rmaxwd(991) {
+      margin-top: 0;
+      padding-top: 100px;
+    }
+  }
+}
+// About Us Area
+.about-us-area {
+    &.style-1 {
+      padding-top: 120px;
+
+      @include md {
+        padding-top: 80px;
+      }
+      @include lg {
+        padding-top: 100px;
+      }
+      .te-about-info-card {
+        &.style-2 {
+          padding-left: 30px;
+        }
+      }
+      .te-about-image-card {
+        &.style-2 {
+          padding-right: 30px;
+          @include sm {
+            padding-right: 0;
+            margin-bottom: 50px;
+          }
+          @include md {
+            margin-bottom: 200px;
+            padding-right: 0;
+          }
+          @include lg {
+            margin-bottom: 200px;
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+// Feature Area
+.feature-area {
+    &.style-1 {
+        padding-top: 120px;
+        padding-bottom: 96px;
+
+        @include sm {
+            padding-top: 80px;
+            padding-bottom: 56px;
+        }
+
+        @include md {
+            padding-top: 100px;
+            padding-bottom: 76px;
+        }
+
+        .te-info-card  {
+            &:hover {
+                .te-theme-btn {
+                    background-color: $blue-color;
+                    border-color: $blue-color;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+// Testimonial Slider
+.testimonial-slider-area {
+    &.style-1 {
+        padding-bottom: 5px;
+    }
+}
+// Portfolio Area
+.portfolio-area {
+    &.style-1 {
+        padding-top: 120px;
+        padding-bottom: 96px;
+
+        @include sm {
+            padding-top: 80px;
+            padding-bottom: 56px;
+        }
+
+        @include md {
+            padding-top: 100px;
+            padding-bottom: 76px;
+        }
+    }
+}
+
+// Counter Up Area
+
+.counter-up-area {
+    &.style-1 {
+        padding-top: 710px;
+        padding-bottom: 120px;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        margin-top: -655px;
+
+        @include sm {
+            padding-bottom: 80px;
+        }
+        @include md {
+            padding-bottom: 100px;
+        }
+    }
+}
+
+// Process Step Area
+.te-process-step-area {
+    &.style-1 {
+        padding-top: 120px;
+        padding-bottom: 96px;
+
+        @include sm {
+            padding-top: 80px;
+            padding-bottom: 56px;
+        }
+
+        @include md {
+            padding-top: 100px;
+            padding-bottom: 76px;
+        }
+    }
+}
+
+
+// Latest Post Area
+
+.latest-posts-area {
+    &.style-1 {
+        padding-top: 120px;
+        padding-bottom: 80px;
+
+        @include sm {
+            padding-top: 80px;
+            padding-bottom: 40px;
+        }
+        @include md {
+            padding-top: 100px;
+            padding-bottom: 60px;
+        }
+    }
+}
+
+// Team Slider Area
+.team-slider-area {
+    &.style-1 {
+        overflow: hidden;
+    }
+}
+
+// Certifications carousel sizing tweaks
+.team-slider-area.certifications-area {
+    .cert-card-media {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            max-height: 90px;
+            width: auto;
+            object-fit: contain;
+        }
+    }
+}
+
+// Brand Marquee Area
+.brand-marquee-area {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 66px;
+    background-color: $primary-color;
+    @include rmaxwd(767) {
+      gap: 20px;
+    }
+    .brand-marquee-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 44px;
+  
+      &.first-brand-marquee{
+        animation: Scroll 32s linear infinite;
+      }
+      &.second-brand-marquee{
+        animation: Scroll 32s linear infinite;
+        animation-direction: reverse;
+      }
+    }
+    .single-brand-marquee {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 44px;
+  
+      &:nth-child(even) {
+        .brand-marquee-title {
+          color: $orange-color;
+        }
+      }
+      &:last-child {
+        .brand-marquee-star {
+          display: none;
+        }
+      }
+      .brand-marquee-title {
+        font-size: 32px;
+        color: $white;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: initial;
+        white-space: nowrap;
+  
+        @include sm {
+          font-size: 62px;
+          line-height: 62px;
+        }
+        @include md {
+          font-size: 80px;
+          line-height: 80px;
+        }
+        @include lg {
+          font-size: 95px;
+          line-height: 75px;
+        }
+        @include xl {
+          font-size: 100px;
+          line-height: 80px;
+        }
+      }
+      .brand-marquee-star {
+        font-size: 90px;
+        font-weight: 500;
+        color: $orange-color;
+        white-space: nowrap;
+        margin-top: 20px;
+        line-height: 0;
+      }
+    }
+  }
